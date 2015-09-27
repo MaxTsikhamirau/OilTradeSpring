@@ -1,0 +1,266 @@
+2015-09-21 01:08:54 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@81ada27: startup date [Mon Sep 21 01:08:54 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 01:08:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 01:08:55 WARN  ClassPathXmlApplicationContext:544 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.commons.dbcp2.BasicDataSource] for bean with name 'dataSource' defined in class path resource [spring-config.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.commons.dbcp2.BasicDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1351)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:974)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:752)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at by.academy.tikhomirov.dao.App.main(App.java:16)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.dbcp2.BasicDataSource
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:250)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:394)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1343)
+	... 10 more
+2015-09-21 01:16:56 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@81ada27: startup date [Mon Sep 21 01:16:56 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 01:16:56 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 01:16:56 WARN  ClassPathXmlApplicationContext:544 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [org.apache.commons.dbcp2.BasicDataSource] for bean with name 'dataSource' defined in class path resource [spring-config.xml]; nested exception is java.lang.ClassNotFoundException: org.apache.commons.dbcp2.BasicDataSource
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1351)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:974)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:752)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at by.academy.tikhomirov.dao.App.main(App.java:16)
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.dbcp2.BasicDataSource
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:250)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:394)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1343)
+	... 10 more
+2015-09-21 01:19:00 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@81ada27: startup date [Mon Sep 21 01:19:00 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 01:19:00 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 01:19:01 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 01:19:01 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 01:19:01 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 01:19:01 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 01:19:02 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 01:19:02 WARN  ClassPathXmlApplicationContext:544 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sessionFactory' defined in class path resource [spring-config.xml]: Invocation of init method failed; nested exception is org.hibernate.MappingException: Unable to load class [ org.TikhomirovHyber.pojos.Sort] declared in Hibernate configuration <mapping/> entry
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1578)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:753)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at by.academy.tikhomirov.dao.App.main(App.java:16)
+Caused by: org.hibernate.MappingException: Unable to load class [ org.TikhomirovHyber.pojos.Sort] declared in Hibernate configuration <mapping/> entry
+	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2279)
+	at org.hibernate.cfg.Configuration.parseSessionFactory(Configuration.java:2227)
+	at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:2207)
+	at org.hibernate.cfg.Configuration.doConfigure(Configuration.java:2160)
+	at org.hibernate.cfg.Configuration.configure(Configuration.java:2111)
+	at org.springframework.orm.hibernate4.LocalSessionFactoryBean.afterPropertiesSet(LocalSessionFactoryBean.java:348)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1637)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1574)
+	... 12 more
+Caused by: java.lang.ClassNotFoundException: org.TikhomirovHyber.pojos.Sort
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.hibernate.internal.util.ReflectHelper.classForName(ReflectHelper.java:193)
+	at org.hibernate.cfg.Configuration.parseMappingElement(Configuration.java:2276)
+	... 19 more
+2015-09-21 01:20:57 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@81ada27: startup date [Mon Sep 21 01:20:57 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 01:20:57 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 01:20:58 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 01:20:58 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 01:20:58 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 01:20:58 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 01:20:58 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 01:20:58 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 01:20:58 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 01:20:58 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 01:20:59 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 01:20:59 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 01:20:59 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 01:21:02 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3cfdda6c] of Hibernate SessionFactory for HibernateTransactionManager
+2015-09-21 01:21:02 WARN  ClassPathXmlApplicationContext:544 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.CannotLoadBeanClassException: Error loading class [by.academy.tikhomirov.dao.impl.UserDAOImpl] for bean with name 'userDao' defined in class path resource [spring-config.xml]: problem with class file or dependent class; nested exception is java.lang.NoClassDefFoundError: by/academy/tikhomirov/dao/impl/UserDAOImpl (wrong name: by/academy/tikhomirov/dao/impl/UserDaoImpl)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1354)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:628)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:597)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1444)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:974)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:752)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at by.academy.tikhomirov.dao.App.main(App.java:16)
+Caused by: java.lang.NoClassDefFoundError: by/academy/tikhomirov/dao/impl/UserDAOImpl (wrong name: by/academy/tikhomirov/dao/impl/UserDaoImpl)
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$100(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:250)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:394)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1396)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1343)
+	... 10 more
+2015-09-21 01:23:07 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ae83a99: startup date [Mon Sep 21 01:23:07 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 01:23:07 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 01:23:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 01:23:07 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 01:23:07 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 01:23:07 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 01:23:08 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 01:23:08 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 01:23:08 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 01:23:08 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 01:23:08 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 01:23:08 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 01:23:08 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 01:23:09 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@2587cde8] of Hibernate SessionFactory for HibernateTransactionManager
+2015-09-21 01:24:20 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@155e402: startup date [Mon Sep 21 01:24:20 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 01:24:20 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 01:24:21 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 01:24:21 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 01:24:21 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 01:24:21 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 01:24:21 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 01:24:21 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 01:24:21 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 01:24:21 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 01:24:21 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 01:24:21 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 01:24:21 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 01:24:22 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@408e20fe] of Hibernate SessionFactory for HibernateTransactionManager
+2015-09-21 21:02:02 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@81ada27: startup date [Mon Sep 21 21:02:02 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 21:02:02 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 21:02:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 21:02:05 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 21:02:05 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 21:02:05 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 21:02:05 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 21:02:06 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 21:02:07 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 21:02:07 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 21:02:08 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 21:02:08 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 21:02:09 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 21:02:14 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@27e2a446] of Hibernate SessionFactory for HibernateTransactionManager
+2015-09-21 21:08:00 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@81ada27: startup date [Mon Sep 21 21:08:00 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 21:08:01 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 21:08:01 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 21:08:01 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 21:08:01 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 21:08:01 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 21:08:01 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 21:08:01 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 21:08:01 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 21:08:01 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 21:08:02 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 21:08:02 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 21:08:02 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 21:08:03 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3e5f3179] of Hibernate SessionFactory for HibernateTransactionManager
+2015-09-21 21:09:08 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@45f209c: startup date [Mon Sep 21 21:09:08 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 21:09:08 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 21:09:08 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 21:09:08 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 21:09:08 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 21:09:08 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 21:09:08 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 21:09:08 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 21:09:09 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 21:09:09 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 21:09:09 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 21:09:09 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 21:09:09 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 21:09:10 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@408e20fe] of Hibernate SessionFactory for HibernateTransactionManager
+2015-09-21 21:19:14 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@155e402: startup date [Mon Sep 21 21:19:14 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 21:19:14 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 21:19:14 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-21 21:19:14 WARN  ClassPathXmlApplicationContext:544 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [spring-config.xml]: Invalid destruction signature; nested exception is org.springframework.beans.factory.support.BeanDefinitionValidationException: Couldn't find a destroy method named 'close' on bean with name 'dataSource'
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:589)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at by.academy.tikhomirov.dao.App.main(App.java:17)
+Caused by: org.springframework.beans.factory.support.BeanDefinitionValidationException: Couldn't find a destroy method named 'close' on bean with name 'dataSource'
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.<init>(DisposableBeanAdapter.java:125)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.registerDisposableBeanIfNecessary(AbstractBeanFactory.java:1624)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:586)
+	... 11 more
+2015-09-21 21:19:45 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@45f209c: startup date [Mon Sep 21 21:19:45 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 21:19:45 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 21:19:46 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 21:19:46 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 21:19:46 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 21:19:46 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 21:19:46 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 21:19:46 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 21:19:46 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 21:19:46 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 21:19:46 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 21:19:46 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 21:19:46 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 21:19:47 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@3e5f3179] of Hibernate SessionFactory for HibernateTransactionManager
+2015-09-21 21:20:18 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@45f209c: startup date [Mon Sep 21 21:20:18 GMT+03:00 2015]; root of context hierarchy
+2015-09-21 21:20:18 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-21 21:20:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-21 21:20:18 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-21 21:20:18 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-21 21:20:18 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-21 21:20:19 INFO  Configuration:2109 - HHH000044: Configuring from URL: file:/D:/env/application/OilTradeSpring/OilTradeSpring/OilTradeDAOSpring/target/classes/hibernate.cfg.xml
+2015-09-21 21:20:19 INFO  Configuration:2214 - HHH000041: Configured SessionFactory: null
+2015-09-21 21:20:19 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-21 21:20:19 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-21 21:20:19 INFO  TransactionFactoryInitiator:62 - HHH000399: Using default transaction strategy (direct JDBC transactions)
+2015-09-21 21:20:19 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-21 21:20:19 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-21 21:20:20 INFO  HibernateTransactionManager:360 - Using DataSource [org.apache.commons.dbcp.BasicDataSource@5ba91eec] of Hibernate SessionFactory for HibernateTransactionManager

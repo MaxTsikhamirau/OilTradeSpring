@@ -1,0 +1,1511 @@
+2015-09-26 11:28:57 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 11:28:57 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 11:28:57 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@8ba6621, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5870501, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6359877c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ace10d9]
+2015-09-26 11:28:58 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@d8e1916: startup date [Sat Sep 26 11:28:58 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 11:28:59 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 11:28:59 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 11:28:59 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 11:28:59 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 11:29:00 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 11:29:00 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 11:29:00 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 11:29:01 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 11:29:02 WARN  JdbcServicesImpl:204 - HHH000342: Could not obtain connection to query metadata : Access denied for user 'root'@'localhost' (using password: YES)
+2015-09-26 11:29:02 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 11:29:02 INFO  LobCreatorBuilder:88 - HHH000422: Disabling contextual LOB creation as connection was null
+2015-09-26 11:29:03 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 11:29:03 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 11:29:05 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 11:29:05 ERROR SchemaExport:385 - HHH000231: Schema export unsuccessful
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3847)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3783)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1665)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1207)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2249)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2079)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:153)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:155)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:120)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:52)
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:367)
+	at org.hibernate.tool.hbm2ddl.SchemaExport.create(SchemaExport.java:304)
+	at org.hibernate.tool.hbm2ddl.SchemaExport.create(SchemaExport.java:293)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:517)
+	at org.hibernate.cfg.Configuration.buildSessionFactory(Configuration.java:1857)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:850)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl$4.perform(EntityManagerFactoryBuilderImpl.java:843)
+	at org.hibernate.boot.registry.classloading.internal.ClassLoaderServiceImpl.withTccl(ClassLoaderServiceImpl.java:398)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:842)
+	at org.hibernate.jpa.HibernatePersistenceProvider.createContainerEntityManagerFactory(HibernatePersistenceProvider.java:152)
+	at org.hibernate.ejb.HibernatePersistence.createContainerEntityManagerFactory(HibernatePersistence.java:67)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:341)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:318)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1627)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1564)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:540)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:956)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2015-09-26 11:29:05 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 11:29:06 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@8ba6621] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@154d2e6]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, type=class java.lang.Object, authenticationType=CONTAINER, lookup=, description=, name=)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, type=class java.lang.Object, authenticationType=CONTAINER, lookup=, description=, name=)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305)
+	... 26 more
+2015-09-26 11:29:06 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@d8e1916: startup date [Sat Sep 26 11:28:58 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 11:29:06 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 11:29:06 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 11:29:06 ERROR SchemaExport:385 - HHH000231: Schema export unsuccessful
+java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:998)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3847)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3783)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1665)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1207)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2249)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2280)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2079)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:400)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at java.sql.DriverManager.getConnection(Unknown Source)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriverManager(DriverManagerDataSource.java:153)
+	at org.springframework.jdbc.datasource.DriverManagerDataSource.getConnectionFromDriver(DriverManagerDataSource.java:144)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnectionFromDriver(AbstractDriverBasedDataSource.java:155)
+	at org.springframework.jdbc.datasource.AbstractDriverBasedDataSource.getConnection(AbstractDriverBasedDataSource.java:120)
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:139)
+	at org.hibernate.tool.hbm2ddl.SuppliedConnectionProviderConnectionHelper.prepare(SuppliedConnectionProviderConnectionHelper.java:51)
+	at org.hibernate.tool.hbm2ddl.DatabaseExporter.<init>(DatabaseExporter.java:52)
+	at org.hibernate.tool.hbm2ddl.SchemaExport.execute(SchemaExport.java:367)
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:318)
+	at org.hibernate.tool.hbm2ddl.SchemaExport.drop(SchemaExport.java:314)
+	at org.hibernate.internal.SessionFactoryImpl.close(SessionFactoryImpl.java:1366)
+	at org.hibernate.jpa.internal.EntityManagerFactoryImpl.close(EntityManagerFactoryImpl.java:370)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.invokeProxyMethod(AbstractEntityManagerFactoryBean.java:388)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean$ManagedEntityManagerFactoryInvocationHandler.invoke(AbstractEntityManagerFactoryBean.java:541)
+	at com.sun.proxy.$Proxy37.close(Unknown Source)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.destroy(AbstractEntityManagerFactoryBean.java:464)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:258)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:565)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:541)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:870)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:510)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:908)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:884)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:836)
+	at org.springframework.test.context.ContextCache.remove(ContextCache.java:258)
+	at org.springframework.test.context.ContextCache.remove(ContextCache.java:220)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.closeContext(DefaultCacheAwareContextLoaderDelegate.java:109)
+	at org.springframework.test.context.DefaultTestContext.markApplicationContextDirty(DefaultTestContext.java:81)
+	at org.springframework.test.context.support.DirtiesContextTestExecutionListener.dirtyContext(DirtiesContextTestExecutionListener.java:139)
+	at org.springframework.test.context.support.DirtiesContextTestExecutionListener.afterTestClass(DirtiesContextTestExecutionListener.java:122)
+	at org.springframework.test.context.TestContextManager.afterTestClass(TestContextManager.java:339)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:74)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+2015-09-26 11:29:06 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 12:05:53 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 12:05:53 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 12:05:53 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@8ba6621, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5870501, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6359877c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@ace10d9]
+2015-09-26 12:05:53 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@d8e1916: startup date [Sat Sep 26 12:05:53 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 12:05:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 12:05:54 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 12:05:54 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 12:05:54 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 12:05:54 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 12:05:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 12:05:54 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 12:05:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 12:05:55 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 12:05:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 12:05:55 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 12:05:56 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Can't DROP 'FK_it77eq964jhfqtu54081ebtio'; check that column/key exists
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Can't DROP 'FK_apcc8lxk2xnug8377fatvbn04'; check that column/key exists
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: drop table if exists role
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Cannot delete or update a parent row: a foreign key constraint fails
+2015-09-26 12:05:56 ERROR SchemaExport:425 - HHH000389: Unsuccessful: drop table if exists user
+2015-09-26 12:05:56 ERROR SchemaExport:426 - Cannot delete or update a parent row: a foreign key constraint fails
+2015-09-26 12:05:57 ERROR SchemaExport:425 - HHH000389: Unsuccessful: create table role (role_id integer not null auto_increment, role_name varchar(255), primary key (role_id))
+2015-09-26 12:05:57 ERROR SchemaExport:426 - Table 'role' already exists
+2015-09-26 12:05:57 ERROR SchemaExport:425 - HHH000389: Unsuccessful: create table user (user_id integer not null auto_increment, login varchar(255), password varchar(255), user_name varchar(255), primary key (user_id))
+2015-09-26 12:05:57 ERROR SchemaExport:426 - Table 'user' already exists
+2015-09-26 12:05:59 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 12:05:59 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@8ba6621] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@69913fe7]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305)
+	... 26 more
+2015-09-26 12:05:59 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@d8e1916: startup date [Sat Sep 26 12:05:53 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 12:05:59 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 12:05:59 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 12:06:00 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 12:06:11 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 12:06:11 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 12:06:11 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@71506a1e, org.springframework.test.context.support.DirtiesContextTestExecutionListener@566711b0, org.springframework.test.context.transaction.TransactionalTestExecutionListener@8ba6621, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5870501]
+2015-09-26 12:06:11 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@3b8628c8: startup date [Sat Sep 26 12:06:11 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 12:06:11 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 12:06:12 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 12:06:12 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 12:06:12 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 12:06:12 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 12:06:12 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 12:06:12 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 12:06:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 12:06:13 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 12:06:13 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 12:06:13 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 12:06:14 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 12:06:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 12:06:14 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 12:06:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 12:06:14 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 12:06:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 12:06:14 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 12:06:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 12:06:14 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 12:06:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 12:06:14 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 12:06:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 12:06:14 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 12:06:15 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 12:06:16 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@71506a1e] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@cbbe2cf]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305)
+	... 26 more
+2015-09-26 12:06:16 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@3b8628c8: startup date [Sat Sep 26 12:06:11 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 12:06:16 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 12:06:16 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 12:06:16 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 12:15:11 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 12:15:11 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 12:15:11 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@566711b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@8ba6621, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5870501, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6359877c]
+2015-09-26 12:15:11 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@64df80ff: startup date [Sat Sep 26 12:15:11 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 12:15:11 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 12:15:12 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 12:15:12 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 12:15:12 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 12:15:12 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 12:15:12 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 12:15:12 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 12:15:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 12:15:13 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 12:15:13 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 12:15:13 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 12:15:14 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 12:15:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 12:15:14 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 12:15:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 12:15:14 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 12:15:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 12:15:14 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 12:15:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 12:15:14 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 12:15:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 12:15:14 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 12:15:14 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 12:15:14 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 12:15:15 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 12:15:15 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@566711b0] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@3278a91]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305)
+	... 26 more
+2015-09-26 12:15:15 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@64df80ff: startup date [Sat Sep 26 12:15:11 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 12:15:15 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 12:15:15 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 12:15:16 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 13:56:47 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 13:56:48 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 13:56:48 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@55f5b5fd, org.springframework.test.context.support.DirtiesContextTestExecutionListener@767f2121, org.springframework.test.context.transaction.TransactionalTestExecutionListener@14583a4e, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2c5be151]
+2015-09-26 13:56:48 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@24e55d75: startup date [Sat Sep 26 13:56:48 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 13:56:50 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 13:56:50 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 13:56:50 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 13:56:50 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 13:56:50 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 13:56:50 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 13:56:50 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 13:56:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 13:57:01 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 13:57:05 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 13:57:05 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 13:57:07 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 13:57:07 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 13:57:07 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 13:57:07 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 13:57:07 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 13:57:07 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 13:57:07 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 13:57:07 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 13:57:07 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 13:57:07 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 13:57:07 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 13:57:07 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 13:57:07 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 13:57:11 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 13:57:11 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@55f5b5fd] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@3d1ecba3]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.servise.interf.UserServise by.academy.tikhomirov.test.servise.UserServiseTest.userServise; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.servise.interf.UserServise by.academy.tikhomirov.test.servise.UserServiseTest.userServise; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 28 more
+2015-09-26 13:57:11 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@24e55d75: startup date [Sat Sep 26 13:56:48 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 13:57:11 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 13:57:11 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 13:57:13 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:12:00 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 14:12:00 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 14:12:00 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@ec99b58, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55f5b5fd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@767f2121, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14583a4e]
+2015-09-26 14:12:01 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@5fe2d461: startup date [Sat Sep 26 14:12:01 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:12:01 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 14:12:02 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:12:02 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 14:12:02 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 14:12:02 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 14:12:02 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 14:12:02 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 14:12:03 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 14:12:04 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 14:12:05 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 14:12:05 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 14:12:12 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:12:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 14:12:13 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:12:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 14:12:13 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:12:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 14:12:13 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:12:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 14:12:13 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:12:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 14:12:13 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:12:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 14:12:13 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:12:16 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:12:17 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@ec99b58] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@52316c66]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.servise.interf.UserServise by.academy.tikhomirov.test.servise.UserServiseTest.userServise; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.servise.interf.UserServise by.academy.tikhomirov.test.servise.UserServiseTest.userServise; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 28 more
+2015-09-26 14:12:17 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@5fe2d461: startup date [Sat Sep 26 14:12:01 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:12:17 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:12:17 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:12:17 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:13:55 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 14:13:55 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 14:13:55 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@ec99b58, org.springframework.test.context.support.DirtiesContextTestExecutionListener@55f5b5fd, org.springframework.test.context.transaction.TransactionalTestExecutionListener@767f2121, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14583a4e]
+2015-09-26 14:13:55 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@5fe2d461: startup date [Sat Sep 26 14:13:55 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:13:56 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 14:13:56 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:13:56 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 14:13:56 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 14:13:56 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 14:13:56 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 14:13:56 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 14:13:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 14:13:57 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 14:13:57 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 14:13:58 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 14:13:58 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:13:58 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 14:13:58 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:13:58 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 14:13:58 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:13:58 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 14:13:58 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:13:58 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 14:13:58 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:13:58 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 14:13:58 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:13:58 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 14:13:58 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:14:00 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:14:01 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@ec99b58] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@2da70fa0]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.servise.interf.UserServise by.academy.tikhomirov.test.servise.UserServiseTest.userServise; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.servise.interf.UserServise by.academy.tikhomirov.test.servise.UserServiseTest.userServise; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 26 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 28 more
+2015-09-26 14:14:01 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@5fe2d461: startup date [Sat Sep 26 14:13:55 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:14:01 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:14:01 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:14:01 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:20:26 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 14:20:26 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 14:20:26 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@566711b0, org.springframework.test.context.support.DirtiesContextTestExecutionListener@8ba6621, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5870501, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6359877c]
+2015-09-26 14:20:26 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@64df80ff: startup date [Sat Sep 26 14:20:26 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:20:27 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 14:20:27 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:20:27 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 14:20:27 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 14:20:27 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 14:20:27 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 14:20:27 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 14:20:27 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 14:20:28 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 14:20:28 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 14:20:28 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 14:20:29 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:20:29 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 14:20:29 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:20:29 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 14:20:29 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:20:29 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 14:20:29 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:20:29 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 14:20:29 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:20:29 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 14:20:29 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:20:29 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 14:20:29 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:20:32 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:20:32 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@566711b0] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@3278a91]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'by.academy.tikhomirov.test.servise.UserServiseTest': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:308)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireBeanProperties(AbstractAutowireCapableBeanFactory.java:385)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.servise.interf.UserServise] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@javax.annotation.Resource(shareable=true, mappedName=, description=, name=, type=class java.lang.Object, lookup=, authenticationType=CONTAINER)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.autowireResource(CommonAnnotationBeanPostProcessor.java:442)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.getResource(CommonAnnotationBeanPostProcessor.java:420)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor$ResourceElement.getResourceToInject(CommonAnnotationBeanPostProcessor.java:545)
+	at org.springframework.beans.factory.annotation.InjectionMetadata$InjectedElement.inject(InjectionMetadata.java:155)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessPropertyValues(CommonAnnotationBeanPostProcessor.java:305)
+	... 26 more
+2015-09-26 14:20:32 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@64df80ff: startup date [Sat Sep 26 14:20:26 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:20:32 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:20:32 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:20:32 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:25:25 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 14:25:25 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 14:25:25 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6359877c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@ace10d9, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5eb41c19, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2a0dde2]
+2015-09-26 14:25:25 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@4ea10ca8: startup date [Sat Sep 26 14:25:25 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:25:26 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 14:25:26 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:25:26 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 14:25:26 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 14:25:26 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 14:25:26 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 14:25:26 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 14:25:26 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 14:25:27 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 14:25:27 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 14:25:27 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 14:25:28 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:25:28 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 14:25:28 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:25:28 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 14:25:28 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:25:28 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 14:25:28 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:25:28 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 14:25:28 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:25:28 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 14:25:28 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:25:28 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 14:25:28 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:25:30 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:25:30 WARN  GenericApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 41 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 43 more
+2015-09-26 14:25:30 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:25:30 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:25:30 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:25:30 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@6359877c] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@7452abeb]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:91)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 41 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 43 more
+2015-09-26 14:51:31 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 14:51:31 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 14:51:31 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5eb41c19, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2a0dde2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@f4721c7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6fa97a7]
+2015-09-26 14:51:32 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@2142b533: startup date [Sat Sep 26 14:51:32 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:51:32 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 14:51:33 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:51:33 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 14:51:33 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 14:51:33 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 14:51:33 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 14:51:33 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 14:51:33 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 14:51:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 14:51:34 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 14:51:34 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 14:51:35 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:51:35 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 14:51:35 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:51:35 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 14:51:35 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:51:35 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 14:51:35 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:51:35 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 14:51:35 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:51:35 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 14:51:35 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:51:35 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 14:51:35 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:51:37 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:51:37 WARN  GenericApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 41 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 43 more
+2015-09-26 14:51:37 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:51:37 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:51:38 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:51:38 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5eb41c19] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@7c1f18d1]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:91)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 41 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 43 more
+2015-09-26 14:53:32 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 14:53:32 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 14:53:32 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2a0dde2, org.springframework.test.context.support.DirtiesContextTestExecutionListener@f4721c7, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6fa97a7, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2dfa5885]
+2015-09-26 14:53:32 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@22863854: startup date [Sat Sep 26 14:53:32 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:53:33 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 14:53:33 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:53:33 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 14:53:33 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 14:53:33 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 14:53:33 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 14:53:33 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 14:53:34 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 14:53:34 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 14:53:35 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 14:53:35 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 14:53:36 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:53:36 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 14:53:36 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:53:36 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 14:53:36 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:53:36 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 14:53:36 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:53:36 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 14:53:36 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:53:36 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 14:53:36 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:53:36 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 14:53:36 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:53:37 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:53:39 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@22863854: startup date [Sat Sep 26 14:53:32 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:53:39 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:53:39 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:53:39 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:56:10 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 14:56:10 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 14:56:10 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@2c5be151, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4425a397, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3173175, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@67aff9e8]
+2015-09-26 14:56:10 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@2bbacc03: startup date [Sat Sep 26 14:56:10 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:56:11 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 14:56:11 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:56:11 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 14:56:11 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 14:56:11 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 14:56:11 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 14:56:11 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 14:56:12 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 14:56:12 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 14:56:13 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 14:56:13 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 14:56:13 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:56:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 14:56:13 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:56:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 14:56:13 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 14:56:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 14:56:13 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:56:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 14:56:13 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 14:56:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 14:56:13 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:56:13 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 14:56:13 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 14:56:15 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 14:56:16 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@2bbacc03: startup date [Sat Sep 26 14:56:10 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 14:56:16 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 14:56:16 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 14:56:16 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:13:52 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 15:13:52 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 15:13:52 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@70dc5c99, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13437ab2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@332c45ff, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1fa78298]
+2015-09-26 15:13:53 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@2c90f71b: startup date [Sat Sep 26 15:13:53 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:13:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 15:13:55 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:13:55 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 15:13:55 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 15:13:55 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 15:13:55 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 15:13:55 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 15:13:56 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 15:13:59 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 15:14:00 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 15:14:00 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 15:14:02 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 15:14:02 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 15:14:02 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:14:02 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 15:14:02 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:14:03 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 15:14:03 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:14:03 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 15:14:03 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:14:03 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 15:14:03 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:14:03 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 15:14:03 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:14:08 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:14:13 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@2c90f71b: startup date [Sat Sep 26 15:13:53 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:14:13 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:14:13 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 15:14:14 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:42:26 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 15:42:26 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 15:42:26 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@41604212, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1691cd46, org.springframework.test.context.transaction.TransactionalTestExecutionListener@3e3bba3d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@43401ab6]
+2015-09-26 15:42:27 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@bed44a5: startup date [Sat Sep 26 15:42:27 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:42:28 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 15:42:28 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:42:28 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 15:42:28 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 15:42:29 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 15:42:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 15:42:29 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 15:42:30 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 15:42:31 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 15:42:32 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 15:42:32 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 15:42:33 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 15:42:33 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 15:42:33 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:42:33 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 15:42:33 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:42:33 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 15:42:33 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:42:33 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 15:42:33 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:42:33 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 15:42:33 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:42:33 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 15:42:33 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:42:35 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:42:35 WARN  GenericApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 41 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 43 more
+2015-09-26 15:42:35 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:42:35 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 15:42:36 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:42:36 ERROR TestContextManager:215 - Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@41604212] to prepare test instance [by.academy.tikhomirov.test.servise.UserServiseTest@645dd660]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:91)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:74)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:116)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:82)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:199)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:251)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:253)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:216)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:82)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:60)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:67)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:162)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:675)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:260)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:63)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:83)
+	... 25 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 41 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 43 more
+2015-09-26 15:43:01 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 15:43:01 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 15:43:01 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@70dc5c99, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13437ab2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@332c45ff, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1fa78298]
+2015-09-26 15:43:01 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@2c90f71b: startup date [Sat Sep 26 15:43:01 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:43:02 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 15:43:02 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:43:02 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 15:43:02 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 15:43:02 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 15:43:02 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 15:43:02 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 15:43:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 15:43:03 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 15:43:03 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 15:43:03 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 15:43:04 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 15:43:04 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 15:43:04 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:43:04 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 15:43:04 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:43:04 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 15:43:04 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:43:04 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 15:43:04 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:43:04 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 15:43:04 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:43:04 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 15:43:04 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:43:07 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:43:08 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@2c90f71b: startup date [Sat Sep 26 15:43:01 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:43:08 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:43:08 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 15:43:09 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:43:40 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 15:43:40 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 15:43:40 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@67aff9e8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@52402386, org.springframework.test.context.transaction.TransactionalTestExecutionListener@70dc5c99, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@13437ab2]
+2015-09-26 15:43:40 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@2998cbaa: startup date [Sat Sep 26 15:43:40 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:43:41 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 15:43:41 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:43:41 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 15:43:41 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 15:43:42 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 15:43:42 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 15:43:42 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 15:43:42 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 15:43:42 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 15:43:43 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 15:43:43 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 15:43:44 INFO  SchemaExport:343 - HHH000227: Running hbm2ddl schema export
+2015-09-26 15:43:44 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_5jicdbovxyv3ji1a2w4soi4v0
+2015-09-26 15:43:44 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:43:44 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `offer` drop foreign key FK_cjw24a1uw5immhds1nxxc5ejo
+2015-09-26 15:43:44 ERROR SchemaExport:426 - Table 'testdb.offer' doesn't exist
+2015-09-26 15:43:44 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_ilcwx78y3wy3by1l81xktc8o4
+2015-09-26 15:43:44 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:43:44 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table `order` drop foreign key FK_mh40cn97o5svvy5c32ws9tnvp
+2015-09-26 15:43:44 ERROR SchemaExport:426 - Table 'testdb.order' doesn't exist
+2015-09-26 15:43:44 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_it77eq964jhfqtu54081ebtio
+2015-09-26 15:43:44 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:43:44 ERROR SchemaExport:425 - HHH000389: Unsuccessful: alter table user_role drop foreign key FK_apcc8lxk2xnug8377fatvbn04
+2015-09-26 15:43:44 ERROR SchemaExport:426 - Table 'testdb.user_role' doesn't exist
+2015-09-26 15:43:45 INFO  SchemaExport:405 - HHH000230: Schema export complete
+2015-09-26 15:43:47 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@2998cbaa: startup date [Sat Sep 26 15:43:40 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:43:47 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:46:59 INFO  DefaultTestContextBootstrapper:255 - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+2015-09-26 15:46:59 INFO  DefaultTestContextBootstrapper:203 - Could not instantiate TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener]. Specify custom listener classes or make the default listener classes (and their required dependencies) available. Offending class: [javax/servlet/ServletContext]
+2015-09-26 15:46:59 INFO  DefaultTestContextBootstrapper:181 - Using TestExecutionListeners: [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@70dc5c99, org.springframework.test.context.support.DirtiesContextTestExecutionListener@13437ab2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@332c45ff, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1fa78298]
+2015-09-26 15:46:59 INFO  GenericApplicationContext:510 - Refreshing org.springframework.context.support.GenericApplicationContext@2c90f71b: startup date [Sat Sep 26 15:46:59 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:47:00 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 15:47:00 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 15:47:00 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 15:47:00 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 15:47:00 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 15:47:00 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 15:47:00 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 15:47:00 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 15:47:01 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2015-09-26 15:47:01 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 15:47:01 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 15:47:02 INFO  SchemaUpdate:182 - HHH000228: Running hbm2ddl schema update
+2015-09-26 15:47:02 INFO  SchemaUpdate:193 - HHH000102: Fetching database metadata
+2015-09-26 15:47:02 INFO  SchemaUpdate:205 - HHH000396: Updating schema
+2015-09-26 15:47:03 INFO  TableMetadata:66 - HHH000261: Table found: testdb.offer
+2015-09-26 15:47:03 INFO  TableMetadata:67 - HHH000037: Columns: [price, offer_id, user_id, quantity, sort_id]
+2015-09-26 15:47:03 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_5jicdbovxyv3ji1a2w4soi4v0, fk_cjw24a1uw5immhds1nxxc5ejo]
+2015-09-26 15:47:03 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_5jicdbovxyv3ji1a2w4soi4v0, primary, fk_cjw24a1uw5immhds1nxxc5ejo]
+2015-09-26 15:47:03 INFO  TableMetadata:66 - HHH000261: Table found: testdb.order
+2015-09-26 15:47:03 INFO  TableMetadata:67 - HHH000037: Columns: [price, user_id, quantity, order_id, sort_id]
+2015-09-26 15:47:03 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_mh40cn97o5svvy5c32ws9tnvp, fk_ilcwx78y3wy3by1l81xktc8o4]
+2015-09-26 15:47:03 INFO  TableMetadata:70 - HHH000126: Indexes: [fk_mh40cn97o5svvy5c32ws9tnvp, primary, fk_ilcwx78y3wy3by1l81xktc8o4]
+2015-09-26 15:47:03 INFO  TableMetadata:66 - HHH000261: Table found: testdb.role
+2015-09-26 15:47:03 INFO  TableMetadata:67 - HHH000037: Columns: [role_id, role_name]
+2015-09-26 15:47:03 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-09-26 15:47:03 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-09-26 15:47:03 INFO  TableMetadata:66 - HHH000261: Table found: testdb.sort
+2015-09-26 15:47:03 INFO  TableMetadata:67 - HHH000037: Columns: [sort_id, sort_name]
+2015-09-26 15:47:03 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-09-26 15:47:03 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-09-26 15:47:03 INFO  TableMetadata:66 - HHH000261: Table found: testdb.user
+2015-09-26 15:47:03 INFO  TableMetadata:67 - HHH000037: Columns: [user_name, login, user_id, password]
+2015-09-26 15:47:03 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-09-26 15:47:03 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-09-26 15:47:03 INFO  TableMetadata:66 - HHH000261: Table found: testdb.user_detail
+2015-09-26 15:47:03 INFO  TableMetadata:67 - HHH000037: Columns: [user_id, telephone, country, city]
+2015-09-26 15:47:03 INFO  TableMetadata:69 - HHH000108: Foreign keys: []
+2015-09-26 15:47:03 INFO  TableMetadata:70 - HHH000126: Indexes: [primary]
+2015-09-26 15:47:03 INFO  TableMetadata:66 - HHH000261: Table found: testdb.user_role
+2015-09-26 15:47:03 INFO  TableMetadata:67 - HHH000037: Columns: [role_id, user_id]
+2015-09-26 15:47:03 INFO  TableMetadata:69 - HHH000108: Foreign keys: [fk_it77eq964jhfqtu54081ebtio, fk_apcc8lxk2xnug8377fatvbn04]
+2015-09-26 15:47:03 INFO  TableMetadata:70 - HHH000126: Indexes: [primary, fk_it77eq964jhfqtu54081ebtio]
+2015-09-26 15:47:03 INFO  SchemaUpdate:242 - HHH000232: Schema update complete
+2015-09-26 15:47:04 INFO  GenericApplicationContext:862 - Closing org.springframework.context.support.GenericApplicationContext@2c90f71b: startup date [Sat Sep 26 15:46:59 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 15:47:04 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:05:53 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7aee64f1: startup date [Sat Sep 26 22:05:53 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 22:05:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 22:05:54 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:05:54 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 22:05:54 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 22:05:55 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 22:05:55 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 22:05:55 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 22:05:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 22:05:56 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-26 22:05:56 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 22:05:57 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 22:06:57 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@7aee64f1: startup date [Sat Sep 26 22:06:57 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 22:06:58 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 22:06:58 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:06:58 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 22:06:58 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 22:06:58 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 22:06:58 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 22:06:58 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 22:06:59 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 22:06:59 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-26 22:07:00 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 22:07:00 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 22:33:23 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3eed2cab: startup date [Sat Sep 26 22:33:23 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 22:33:24 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 22:33:24 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:33:24 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 22:33:24 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 22:33:24 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 22:33:24 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 22:33:24 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 22:33:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 22:33:25 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-26 22:33:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 22:33:26 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 22:35:47 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@19a05c93: startup date [Sat Sep 26 22:35:47 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 22:35:47 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 22:35:48 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:35:48 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 22:35:48 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 22:35:48 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 22:35:48 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 22:35:48 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 22:35:48 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 22:35:49 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-26 22:35:49 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 22:35:49 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 22:40:17 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@60c4d1a7: startup date [Sat Sep 26 22:40:17 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 22:40:17 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 22:40:18 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:40:18 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 22:40:18 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 22:40:18 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 22:40:18 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 22:40:18 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 22:40:18 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 22:40:19 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-26 22:40:19 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 22:40:19 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 22:43:23 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@19a05c93: startup date [Sat Sep 26 22:43:23 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 22:43:24 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 22:43:24 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:43:24 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 22:43:24 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 22:43:24 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 22:43:24 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 22:43:24 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 22:43:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 22:43:25 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-26 22:43:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 22:43:26 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-26 22:46:47 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@60c4d1a7: startup date [Sat Sep 26 22:46:47 GMT+03:00 2015]; root of context hierarchy
+2015-09-26 22:46:48 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-26 22:46:48 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-26 22:46:48 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-26 22:46:48 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-26 22:46:48 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-26 22:46:48 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-26 22:46:48 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-26 22:46:49 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-26 22:46:49 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-26 22:46:50 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-26 22:46:50 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final

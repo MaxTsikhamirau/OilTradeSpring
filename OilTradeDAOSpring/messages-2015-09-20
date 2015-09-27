@@ -1,0 +1,28 @@
+2015-09-20 22:34:04 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1ae83a99: startup date [Sun Sep 20 22:34:04 GMT+03:00 2015]; root of context hierarchy
+2015-09-20 22:34:04 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
+2015-09-20 22:34:05 WARN  ClassPathXmlApplicationContext:544 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'user' defined in class path resource [spring-config.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'message' of bean class [by.academy.tikhomirov.dao.pojos.User]: Bean property 'message' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1226)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:543)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:305)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:301)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at by.academy.tikhomirov.dao.App.main(App.java:16)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'message' of bean class [by.academy.tikhomirov.dao.pojos.User]: Bean property 'message' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.createNotWritablePropertyException(BeanWrapperImpl.java:229)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:423)
+	at org.springframework.beans.AbstractNestablePropertyAccessor.setPropertyValue(AbstractNestablePropertyAccessor.java:280)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	... 13 more
+2015-09-20 22:35:54 INFO  ClassPathXmlApplicationContext:573 - Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4033ca1f: startup date [Sun Sep 20 22:35:54 GMT+03:00 2015]; root of context hierarchy
+2015-09-20 22:35:54 INFO  XmlBeanDefinitionReader:317 - Loading XML bean definitions from class path resource [spring-config.xml]
