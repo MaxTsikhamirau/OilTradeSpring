@@ -1,377 +1,128 @@
-2015-09-27 00:17:08 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@655fd43: startup date [Sun Sep 27 00:17:08 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:17:09 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:17:09 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:17:09 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:17:09 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:00:26 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f9ab1bf: startup date [Mon Sep 28 00:00:26 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:00:26 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:00:27 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:00:27 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:00:27 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:17:09 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:17:09 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:17:09 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:17:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:17:11 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:17:11 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:17:12 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:17:34 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6f1dc409: startup date [Sun Sep 27 00:17:34 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:17:34 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:17:35 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:17:35 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:17:35 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:00:27 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:00:27 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:00:27 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:00:27 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:00:28 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:00:28 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:00:28 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:00:30 INFO  OfferServiseImpl:40 - Getting list of appropriate offers where sort_name:= WTI ,quantity>= 5 ,price<= 50 : start
+2015-09-28 00:00:30 INFO  OfferServiseImpl:45 - Getting list of appropriate offers: complete
+2015-09-28 00:00:57 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3f9ab1bf: startup date [Mon Sep 28 00:00:57 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:00:58 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:00:58 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:00:58 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:00:58 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:17:35 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:17:35 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:17:35 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:17:35 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:17:36 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:17:36 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:17:36 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:17:52 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b3163dd: startup date [Sun Sep 27 00:17:52 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:17:53 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:17:53 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:17:53 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:17:53 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:00:58 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:00:58 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:00:58 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:00:59 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:00:59 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:00:59 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:00:59 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:01:01 INFO  OfferServiseImpl:40 - Getting list of appropriate offers where sort_name:= WTI ,quantity>= 5 ,price<= 150 : start
+2015-09-28 00:01:01 INFO  OfferServiseImpl:45 - Getting list of appropriate offers: complete
+2015-09-28 00:01:22 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@68ce4f39: startup date [Mon Sep 28 00:01:22 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:01:23 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:01:23 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:01:23 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:01:23 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:17:54 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:17:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:17:54 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:17:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:17:54 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:17:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:17:55 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:21:28 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6f1dc409: startup date [Sun Sep 27 00:21:28 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:21:29 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:21:29 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:21:29 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:21:29 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:01:24 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:01:24 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:01:24 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:01:24 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:01:25 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:01:25 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:01:25 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:01:27 INFO  OfferServiseImpl:40 - Getting list of appropriate offers where sort_name:= Brent ,quantity>= 5 ,price<= 150 : start
+2015-09-28 00:01:27 INFO  OfferServiseImpl:45 - Getting list of appropriate offers: complete
+2015-09-28 00:18:38 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b3163dd: startup date [Mon Sep 28 00:18:38 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:18:39 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:18:39 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:18:39 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:18:39 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:21:29 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:21:29 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:21:29 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:21:29 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:21:30 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:21:30 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:21:30 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:23:23 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6f1dc409: startup date [Sun Sep 27 00:23:23 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:23:24 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:23:24 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:23:24 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:23:24 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:18:39 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:18:39 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:18:39 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:18:39 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:18:40 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:18:40 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:18:40 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:18:42 INFO  OfferServiseImpl:40 - Getting list of appropriate offers where sort_name:= Brent ,quantity>= 5 ,price<= 150 : start
+2015-09-28 00:18:42 INFO  OfferServiseImpl:48 - Getting list of appropriate offers: complete
+2015-09-28 00:18:42 INFO  OfferServiseImpl:111 - Editing offer: start
+2015-09-28 00:19:31 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6f1dc409: startup date [Mon Sep 28 00:19:31 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:19:31 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:19:32 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:19:32 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:19:32 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:23:24 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:23:24 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:23:24 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:23:24 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:23:25 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:23:25 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:23:25 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:23:54 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b3163dd: startup date [Sun Sep 27 00:23:54 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:23:55 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:23:55 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:23:55 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:23:55 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:19:32 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:19:32 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:19:32 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:19:32 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:19:33 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:19:33 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:19:33 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:19:35 INFO  OfferServiseImpl:111 - Editing offer: start
+2015-09-28 00:20:46 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@60c4d1a7: startup date [Mon Sep 28 00:20:46 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:20:46 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:20:47 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:20:47 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:20:47 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:23:55 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:23:55 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:23:55 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:23:55 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:23:56 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:23:56 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:23:56 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:26:02 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b3163dd: startup date [Sun Sep 27 00:26:02 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:26:03 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:26:03 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:26:03 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:26:03 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:20:47 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:20:47 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:20:47 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:20:47 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:20:48 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:20:48 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:20:48 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:20:50 INFO  OfferServiseImpl:111 - Editing offer: start
+2015-09-28 00:20:50 INFO  OfferServiseImpl:119 - Editing offer: complete. Edited offer: Offer [offer_id=2, quantity=200, price=220]
+2015-09-28 00:21:05 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@19a05c93: startup date [Mon Sep 28 00:21:05 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:21:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:21:06 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:21:06 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:21:06 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:26:03 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:26:03 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:26:03 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:26:04 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:26:04 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:26:04 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:26:05 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:27:28 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b3163dd: startup date [Sun Sep 27 00:27:28 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:27:29 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:27:29 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:27:29 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:27:29 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+2015-09-28 00:21:07 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:21:07 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:21:07 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:21:07 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:21:07 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:21:08 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:21:08 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:21:09 INFO  OfferServiseImpl:111 - Editing offer: start
+2015-09-28 00:21:10 INFO  OfferServiseImpl:119 - Editing offer: complete. Edited offer: Sort [sort_id=3, sort_name=WTI]
+2015-09-28 00:27:09 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@19a05c93: startup date [Mon Sep 28 00:27:09 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 00:27:10 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 00:27:10 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 00:27:10 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 00:27:10 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
 	name: default
 	...]
-2015-09-27 00:27:30 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:27:30 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:27:30 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:27:30 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:27:31 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:27:31 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:27:31 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:28:07 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@b3163dd: startup date [Sun Sep 27 00:28:07 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:28:08 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:28:08 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:28:08 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:28:08 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 00:28:08 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:28:08 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:28:08 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:28:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:28:09 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:28:10 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:28:10 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 00:29:02 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6ed6ee82: startup date [Sun Sep 27 00:29:02 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 00:29:02 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 00:29:03 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 00:29:03 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 00:29:03 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 00:29:03 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 00:29:03 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 00:29:03 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 00:29:03 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 00:29:04 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 00:29:04 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 00:29:04 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 12:50:38 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@156ff34d: startup date [Sun Sep 27 12:50:38 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 12:50:40 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 12:50:40 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 12:50:40 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 12:50:40 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 12:50:40 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 12:50:40 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 12:50:40 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 12:50:41 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 12:50:42 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 12:50:43 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 12:50:43 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 12:50:46 WARN  AnnotationConfigApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': FactoryBean threw exception on object creation; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property add found for type by.academy.tikhomirov.pojos.User
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
-	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
-	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:84)
-	at by.academy.tikhomirov.App.main(App.java:24)
-Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': FactoryBean threw exception on object creation; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property add found for type by.academy.tikhomirov.pojos.User
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
-	... 12 more
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userRepository': FactoryBean threw exception on object creation; nested exception is org.springframework.data.mapping.PropertyReferenceException: No property add found for type by.academy.tikhomirov.pojos.User
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:175)
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.getObjectFromFactoryBean(FactoryBeanRegistrySupport.java:103)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getObjectForBeanInstance(AbstractBeanFactory.java:1512)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:250)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1081)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1006)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
-	... 14 more
-Caused by: org.springframework.data.mapping.PropertyReferenceException: No property add found for type by.academy.tikhomirov.pojos.User
-	at org.springframework.data.mapping.PropertyPath.<init>(PropertyPath.java:75)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:327)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:353)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:353)
-	at org.springframework.data.mapping.PropertyPath.create(PropertyPath.java:307)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:271)
-	at org.springframework.data.mapping.PropertyPath.from(PropertyPath.java:245)
-	at org.springframework.data.repository.query.parser.Part.<init>(Part.java:72)
-	at org.springframework.data.repository.query.parser.PartTree$OrPart.<init>(PartTree.java:180)
-	at org.springframework.data.repository.query.parser.PartTree$Predicate.buildTree(PartTree.java:260)
-	at org.springframework.data.repository.query.parser.PartTree$Predicate.<init>(PartTree.java:240)
-	at org.springframework.data.repository.query.parser.PartTree.<init>(PartTree.java:68)
-	at org.springframework.data.jpa.repository.query.PartTreeJpaQuery.<init>(PartTreeJpaQuery.java:57)
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:90)
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$CreateIfNotFoundQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:162)
-	at org.springframework.data.jpa.repository.query.JpaQueryLookupStrategy$AbstractQueryLookupStrategy.resolveQuery(JpaQueryLookupStrategy.java:68)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport$QueryExecutorMethodInterceptor.<init>(RepositoryFactorySupport.java:279)
-	at org.springframework.data.repository.core.support.RepositoryFactorySupport.getRepository(RepositoryFactorySupport.java:147)
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getObject(RepositoryFactoryBeanSupport.java:153)
-	at org.springframework.data.repository.core.support.RepositoryFactoryBeanSupport.getObject(RepositoryFactoryBeanSupport.java:43)
-	at org.springframework.beans.factory.support.FactoryBeanRegistrySupport.doGetObjectFromFactoryBean(FactoryBeanRegistrySupport.java:168)
-	... 22 more
-2015-09-27 12:50:46 INFO  LocalContainerEntityManagerFactoryBean:462 - Closing JPA EntityManagerFactory for persistence unit 'default'
-2015-09-27 12:52:14 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@156ff34d: startup date [Sun Sep 27 12:52:14 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 12:52:15 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 12:52:15 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 12:52:15 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 12:52:15 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 12:52:15 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 12:52:15 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 12:52:15 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 12:52:15 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 12:52:16 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 12:52:16 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 12:52:16 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 13:46:55 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@40b35cf0: startup date [Sun Sep 27 13:46:55 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 13:46:56 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 13:46:56 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 13:46:56 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 13:46:56 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 13:46:56 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 13:46:56 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 13:46:56 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 13:46:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 13:46:57 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 13:46:57 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 13:46:57 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 13:47:53 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@715d1298: startup date [Sun Sep 27 13:47:53 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 13:47:54 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 13:47:54 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 13:47:54 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 13:47:54 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 13:47:54 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 13:47:54 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 13:47:54 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 13:47:54 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 13:47:55 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 13:47:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 13:47:55 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 13:48:55 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@156ff34d: startup date [Sun Sep 27 13:48:55 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 13:48:55 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 13:48:56 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 13:48:56 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 13:48:56 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 13:48:56 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 13:48:56 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 13:48:56 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 13:48:56 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 13:48:57 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 13:48:57 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 13:48:57 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 13:50:03 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@156ff34d: startup date [Sun Sep 27 13:50:03 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 13:50:04 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 13:50:04 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 13:50:04 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 13:50:04 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 13:50:04 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 13:50:04 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 13:50:04 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 13:50:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 13:50:05 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 13:50:05 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 13:50:06 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 13:50:21 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@40b35cf0: startup date [Sun Sep 27 13:50:21 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 13:50:22 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 13:50:22 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 13:50:22 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 13:50:22 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 13:50:22 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 13:50:22 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 13:50:22 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 13:50:22 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 13:50:23 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 13:50:23 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 13:50:23 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 13:55:08 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@40b35cf0: startup date [Sun Sep 27 13:55:08 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 13:55:09 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 13:55:09 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 13:55:09 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 13:55:09 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 13:55:09 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 13:55:09 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 13:55:09 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 13:55:09 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 13:55:10 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 13:55:10 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 13:55:10 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 14:33:38 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@450faed3: startup date [Sun Sep 27 14:33:38 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 14:33:39 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 14:33:39 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 14:33:39 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 14:33:39 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 14:33:39 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 14:33:39 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 14:33:39 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 14:33:39 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 14:33:40 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 14:33:40 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 14:33:40 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 14:35:03 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@450faed3: startup date [Sun Sep 27 14:35:03 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 14:35:04 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 14:35:04 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 14:35:04 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 14:35:04 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 14:35:04 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 14:35:04 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 14:35:04 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 14:35:05 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 14:35:05 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 14:35:06 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 14:35:06 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 14:35:56 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@450faed3: startup date [Sun Sep 27 14:35:56 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 14:35:57 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 14:35:57 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 14:35:57 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 14:35:57 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 14:35:57 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 14:35:57 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 14:35:57 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 14:35:58 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 14:35:58 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 14:35:58 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 14:35:59 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 14:37:30 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@450faed3: startup date [Sun Sep 27 14:37:30 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 14:37:31 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 14:37:31 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 14:37:31 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 14:37:31 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 14:37:31 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 14:37:31 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 14:37:31 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 14:37:32 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 14:37:32 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 14:37:32 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 14:37:33 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
-2015-09-27 14:38:04 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@3eed2cab: startup date [Sun Sep 27 14:38:04 GMT+03:00 2015]; root of context hierarchy
-2015-09-27 14:38:05 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
-2015-09-27 14:38:05 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
-2015-09-27 14:38:05 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
-2015-09-27 14:38:05 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
-	name: default
-	...]
-2015-09-27 14:38:05 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
-2015-09-27 14:38:05 INFO  Environment:239 - HHH000206: hibernate.properties not found
-2015-09-27 14:38:05 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
-2015-09-27 14:38:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
-2015-09-27 14:38:06 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
-2015-09-27 14:38:06 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
-2015-09-27 14:38:06 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:27:10 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 00:27:10 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 00:27:10 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 00:27:11 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 00:27:11 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 00:27:11 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 00:27:11 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 00:27:13 INFO  OfferServiseImpl:111 - Editing offer: start
+2015-09-28 00:27:14 INFO  OfferServiseImpl:120 - Editing offer: complete. Edited offer: Sort [sort_id=1, sort_name=WTI]

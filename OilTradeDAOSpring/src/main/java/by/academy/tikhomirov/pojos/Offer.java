@@ -20,11 +20,11 @@ public class Offer implements Serializable {
 	@Column(name = "price")
 	private Integer price;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "sort_id")
 	private Sort sort;
 
-	@ManyToOne(cascade = CascadeType.ALL)
+	@ManyToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "user_id")
 	private User user;
 

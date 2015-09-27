@@ -9,8 +9,6 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import by.academy.tikhomirov.servise.impl.UserServiseImpl;
-import by.academy.tikhomirov.servise.interf.UserServise;
 
 import javax.sql.DataSource;
 import java.util.Properties;

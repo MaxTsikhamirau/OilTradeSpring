@@ -1,8 +1,6 @@
 package by.academy.tikhomirov.servise.interf;
 
 import java.util.List;
-
-import by.academy.tikhomirov.pojos.Role;
 import by.academy.tikhomirov.vo.RoleVO;
 import by.academy.tikhomirov.vo.UserVO;
 
@@ -18,8 +16,5 @@ public interface UserServise {
 	UserVO getAuthorizedUser(String login, String password);
 
 	boolean existsByUserLoginAndPassword(String login, String password);
-	
-	
-	
-	
+
 }

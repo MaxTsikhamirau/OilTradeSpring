@@ -38,7 +38,7 @@ public class User implements Serializable {
 	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="user") 
 	private Set<Order> orders=new HashSet<>();
 	
-	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.ALL, mappedBy="user") 
+	@OneToMany(fetch = FetchType.EAGER, cascade=CascadeType.MERGE, mappedBy="user") 
 	private Set<Offer> offers=new HashSet<>();
 	
 	/**
@@ -132,28 +132,18 @@ public class User implements Serializable {
 	
 
 	
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((login == null) ? 0 : login.hashCode());
-		//result = prime * result + ((offers == null) ? 0 : offers.hashCode());
-		//result = prime * result + ((orders == null) ? 0 : orders.hashCode());
 		result = prime * result + ((password == null) ? 0 : password.hashCode());
-		//result = prime * result + ((roles == null) ? 0 : roles.hashCode());
-		//result = prime * result + ((userDetail == null) ? 0 : userDetail.hashCode());
 		result = prime * result + ((user_id == null) ? 0 : user_id.hashCode());
 		result = prime * result + ((user_name == null) ? 0 : user_name.hashCode());
 		return result;
 	}
 
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -168,30 +158,10 @@ public class User implements Serializable {
 				return false;
 		} else if (!login.equals(other.login))
 			return false;
-		if (offers == null) {
-			if (other.offers != null)
-				return false;
-		} else if (!offers.equals(other.offers))
-			return false;
-		if (orders == null) {
-			if (other.orders != null)
-				return false;
-		} else if (!orders.equals(other.orders))
-			return false;
 		if (password == null) {
 			if (other.password != null)
 				return false;
 		} else if (!password.equals(other.password))
-			return false;
-		if (roles == null) {
-			if (other.roles != null)
-				return false;
-		} else if (!roles.equals(other.roles))
-			return false;
-		if (userDetail == null) {
-			if (other.userDetail != null)
-				return false;
-		} else if (!userDetail.equals(other.userDetail))
 			return false;
 		if (user_id == null) {
 			if (other.user_id != null)

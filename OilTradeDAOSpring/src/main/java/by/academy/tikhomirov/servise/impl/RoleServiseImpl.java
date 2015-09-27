@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 
 import by.academy.tikhomirov.pojos.Role;
 import by.academy.tikhomirov.repository.RoleRepository;
-import by.academy.tikhomirov.repository.UserRepository;
 import by.academy.tikhomirov.servise.interf.RoleServise;
 import by.academy.tikhomirov.vo.RoleVO;
 

@@ -8,6 +8,6 @@ public interface SortServise {
 
 	boolean existsBySortName(String sort_name);
 	
-	Sort findByName(String sort_name);
+	Sort getSortByName(String sort_name);
 
 }

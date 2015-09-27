@@ -12,5 +12,6 @@ public interface SortRepository extends JpaRepository<Sort, Integer> {
 	boolean existsBySortName(@Param("sort_name")String sort_name);
 	
 	@Query("select s from Sort s where s.sort_name = :sort_name")
-	Sort findByName(@Param("sort_name")String sort_name);
+	Sort getSortByName(@Param("sort_name")String sort_name);
+	
 }

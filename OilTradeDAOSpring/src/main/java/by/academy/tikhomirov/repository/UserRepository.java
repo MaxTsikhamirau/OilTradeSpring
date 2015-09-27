@@ -3,10 +3,7 @@ package by.academy.tikhomirov.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-
-import by.academy.tikhomirov.pojos.Role;
 import by.academy.tikhomirov.pojos.User;
-import by.academy.tikhomirov.vo.RoleVO;
 
 public interface UserRepository extends JpaRepository<User, Integer> {
 	@Query("select u from User u where u.login = :login and u.password=:password")
