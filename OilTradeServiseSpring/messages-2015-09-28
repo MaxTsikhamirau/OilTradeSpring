@@ -1,0 +1,332 @@
+2015-09-28 22:27:33 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@40b35cf0: startup date [Mon Sep 28 22:27:33 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 22:27:36 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 22:27:36 WARN  AnnotationConfigApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class by.academy.tikhomirov.config.DataConfig: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean by.academy.tikhomirov.config.DataConfig.entityManagerFactory()] threw exception; nested exception is java.lang.IllegalStateException: required key [db.hibernate.hbm2ddl.auto] not found
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1113)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1008)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:956)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:84)
+	at by.academy.tikhomirov.servise.App.main(App.java:27)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean by.academy.tikhomirov.config.DataConfig.entityManagerFactory()] threw exception; nested exception is java.lang.IllegalStateException: required key [db.hibernate.hbm2ddl.auto] not found
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590)
+	... 13 more
+Caused by: java.lang.IllegalStateException: required key [db.hibernate.hbm2ddl.auto] not found
+	at org.springframework.core.env.AbstractPropertyResolver.getRequiredProperty(AbstractPropertyResolver.java:104)
+	at org.springframework.core.env.AbstractEnvironment.getRequiredProperty(AbstractEnvironment.java:490)
+	at by.academy.tikhomirov.config.DataConfig.getHibernateProperties(DataConfig.java:75)
+	at by.academy.tikhomirov.config.DataConfig.entityManagerFactory(DataConfig.java:57)
+	at by.academy.tikhomirov.config.DataConfig$$EnhancerBySpringCGLIB$$7c5776c6.CGLIB$entityManagerFactory$1(<generated>)
+	at by.academy.tikhomirov.config.DataConfig$$EnhancerBySpringCGLIB$$7c5776c6$$FastClassBySpringCGLIB$$9fcdd076.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:312)
+	at by.academy.tikhomirov.config.DataConfig$$EnhancerBySpringCGLIB$$7c5776c6.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166)
+	... 14 more
+2015-09-28 22:41:33 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@68ce4f39: startup date [Mon Sep 28 22:41:33 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 22:41:34 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 22:41:34 WARN  AnnotationConfigApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class by.academy.tikhomirov.config.DataConfig: Instantiation of bean failed; nested exception is org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean by.academy.tikhomirov.config.DataConfig.entityManagerFactory()] threw exception; nested exception is java.lang.IllegalStateException: required key [db.hibernate.hbm2ddl.auto] not found
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:601)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1113)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1008)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:505)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:956)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:747)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:84)
+	at by.academy.tikhomirov.servise.App.main(App.java:24)
+Caused by: org.springframework.beans.factory.BeanDefinitionStoreException: Factory method [public org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean by.academy.tikhomirov.config.DataConfig.entityManagerFactory()] threw exception; nested exception is java.lang.IllegalStateException: required key [db.hibernate.hbm2ddl.auto] not found
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:188)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:590)
+	... 13 more
+Caused by: java.lang.IllegalStateException: required key [db.hibernate.hbm2ddl.auto] not found
+	at org.springframework.core.env.AbstractPropertyResolver.getRequiredProperty(AbstractPropertyResolver.java:104)
+	at org.springframework.core.env.AbstractEnvironment.getRequiredProperty(AbstractEnvironment.java:490)
+	at by.academy.tikhomirov.config.DataConfig.getHibernateProperties(DataConfig.java:75)
+	at by.academy.tikhomirov.config.DataConfig.entityManagerFactory(DataConfig.java:57)
+	at by.academy.tikhomirov.config.DataConfig$$EnhancerBySpringCGLIB$$c9a60898.CGLIB$entityManagerFactory$1(<generated>)
+	at by.academy.tikhomirov.config.DataConfig$$EnhancerBySpringCGLIB$$c9a60898$$FastClassBySpringCGLIB$$17bfc5c8.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:312)
+	at by.academy.tikhomirov.config.DataConfig$$EnhancerBySpringCGLIB$$c9a60898.entityManagerFactory(<generated>)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:166)
+	... 14 more
+2015-09-28 22:43:43 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@40b35cf0: startup date [Mon Sep 28 22:43:43 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 22:43:44 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 22:43:44 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 22:43:44 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 22:43:44 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 22:43:44 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 22:43:44 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 22:43:44 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 22:43:45 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 22:43:46 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 22:43:46 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 22:43:46 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 22:46:04 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@156ff34d: startup date [Mon Sep 28 22:46:04 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 22:46:06 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 22:46:06 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 22:46:06 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 22:46:06 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 22:46:06 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 22:46:06 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 22:46:06 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 22:46:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 22:46:07 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 22:46:07 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 22:46:08 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:04:41 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@68ce4f39: startup date [Mon Sep 28 23:04:41 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:04:47 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:04:48 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:04:48 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:04:48 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:04:49 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:04:49 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:04:49 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:04:51 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:04:54 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:04:55 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:04:55 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:09:34 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@52ee271d: startup date [Mon Sep 28 23:09:34 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:09:35 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:09:35 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:09:35 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:09:35 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:09:35 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:09:35 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:09:35 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:09:35 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:09:36 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:09:36 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:09:36 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:09:55 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@a4f0187: startup date [Mon Sep 28 23:09:55 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:09:56 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:09:56 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:09:56 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:09:56 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:09:56 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:09:56 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:09:56 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:09:57 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:09:57 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:09:58 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:09:58 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:10:37 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@18adb210: startup date [Mon Sep 28 23:10:37 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:10:37 WARN  AnnotationConfigApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:84)
+	at by.academy.tikhomirov.servise.App.main(App.java:26)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 12 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 14 more
+2015-09-28 23:15:00 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@33854518: startup date [Mon Sep 28 23:15:00 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:15:00 WARN  AnnotationConfigApplicationContext:487 - Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userServise': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:326)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1204)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:538)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:229)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:298)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:193)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:725)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.annotation.AnnotationConfigApplicationContext.<init>(AnnotationConfigApplicationContext.java:84)
+	at by.academy.tikhomirov.servise.App.main(App.java:26)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private by.academy.tikhomirov.repository.UserRepository by.academy.tikhomirov.servise.impl.UserServiseImpl.userRepository; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:542)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:323)
+	... 12 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [by.academy.tikhomirov.repository.UserRepository] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1261)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1009)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:904)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	... 14 more
+2015-09-28 23:15:38 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@68ce4f39: startup date [Mon Sep 28 23:15:38 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:15:39 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:15:39 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:15:39 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:15:39 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:15:39 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:15:40 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:15:40 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:15:40 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:15:41 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:15:41 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:15:41 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:15:59 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2471fd20: startup date [Mon Sep 28 23:15:59 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:16:01 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:16:01 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:16:01 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:16:01 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:16:02 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:16:02 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:16:02 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:16:02 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:16:03 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:16:03 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:16:03 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:16:29 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@1ae83a99: startup date [Mon Sep 28 23:16:29 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:16:30 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:16:31 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:16:31 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:16:31 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:16:31 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:16:31 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:16:31 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:16:31 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:16:32 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:16:32 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:16:32 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:17:37 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@4033ca1f: startup date [Mon Sep 28 23:17:37 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:17:38 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:17:38 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:17:38 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:17:38 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:17:38 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:17:38 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:17:38 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:17:39 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:17:39 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:17:40 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:17:40 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:18:24 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2471fd20: startup date [Mon Sep 28 23:18:23 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:18:25 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:18:25 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:18:25 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:18:25 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:18:25 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:18:25 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:18:25 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:18:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:18:26 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:18:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:18:26 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:19:24 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@2471fd20: startup date [Mon Sep 28 23:19:24 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:19:25 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:19:26 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:19:26 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:19:26 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:19:26 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:19:26 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:19:26 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:19:26 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:19:27 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:19:27 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:19:27 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:30:29 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@a4f0187: startup date [Mon Sep 28 23:30:29 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:30:30 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:30:30 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:30:30 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:30:30 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:30:30 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:30:30 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:30:30 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:30:31 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:30:31 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:30:31 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:30:32 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:32:04 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@81ada27: startup date [Mon Sep 28 23:32:04 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:32:05 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:32:05 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:32:05 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:32:05 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:32:06 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:32:06 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:32:06 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:32:06 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:32:07 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:32:07 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:32:07 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:32:09 INFO  UserServiseImpl:125 - Getting user with login: minimus and password: lloid :start
+2015-09-28 23:32:13 INFO  UserServiseImpl:134 - Getting user with login: minimus and password: lloid :complete
+2015-09-28 23:35:23 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@6274bff8: startup date [Mon Sep 28 23:35:23 GMT+03:00 2015]; root of context hierarchy
+2015-09-28 23:35:24 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-09-28 23:35:24 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-09-28 23:35:24 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-09-28 23:35:24 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-09-28 23:35:24 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-09-28 23:35:24 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-09-28 23:35:24 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-09-28 23:35:25 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-09-28 23:35:25 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-09-28 23:35:26 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-09-28 23:35:26 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-09-28 23:35:27 INFO  UserServiseImpl:125 - Getting user with login: minimus and password: lloid :start
+2015-09-28 23:35:28 INFO  UserServiseImpl:134 - Getting user with login: minimus and password: lloid :complete
+2015-09-28 23:35:28 INFO  OfferServiseImpl:116 - Start creating offer: OfferVO [offer_id=null, quantity=999, price=666, sortVO=SortVO [sort_id=null, sort_name=Brent], userVO=UserVO [user_id=56, user_name=null, login=null, password=null, city=null, country=null, telephone=null, rolesVO=null]]
+2015-09-28 23:35:28 INFO  OfferServiseImpl:119 - Offer: Offer [offer_id=33, quantity=999, price=666] was created

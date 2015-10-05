@@ -1,0 +1,22 @@
+2015-10-05 01:47:32 INFO  AnnotationConfigApplicationContext:510 - Refreshing org.springframework.context.annotation.AnnotationConfigApplicationContext@592bf469: startup date [Mon Oct 05 01:47:31 GMT+03:00 2015]; root of context hierarchy
+2015-10-05 01:47:33 INFO  ConfigurationClassBeanDefinitionReader:282 - Skipping bean definition for [BeanMethod:name=userServiseImpl,declaringClass=by.academy.tikhomirov.servise.config.Beans]: a definition for bean 'userServiseImpl' already exists. This top-level bean definition is considered as an override.
+2015-10-05 01:47:33 INFO  ConfigurationClassBeanDefinitionReader:282 - Skipping bean definition for [BeanMethod:name=offerServiseImpl,declaringClass=by.academy.tikhomirov.servise.config.Beans]: a definition for bean 'offerServiseImpl' already exists. This top-level bean definition is considered as an override.
+2015-10-05 01:47:33 INFO  ConfigurationClassBeanDefinitionReader:282 - Skipping bean definition for [BeanMethod:name=sortServiseImpl,declaringClass=by.academy.tikhomirov.servise.config.Beans]: a definition for bean 'sortServiseImpl' already exists. This top-level bean definition is considered as an override.
+2015-10-05 01:47:33 INFO  ConfigurationClassBeanDefinitionReader:282 - Skipping bean definition for [BeanMethod:name=roleServiseImpl,declaringClass=by.academy.tikhomirov.servise.config.Beans]: a definition for bean 'roleServiseImpl' already exists. This top-level bean definition is considered as an override.
+2015-10-05 01:47:35 INFO  DriverManagerDataSource:133 - Loaded JDBC driver: com.mysql.jdbc.Driver
+2015-10-05 01:47:35 INFO  LocalContainerEntityManagerFactoryBean:337 - Building JPA container EntityManagerFactory for persistence unit 'default'
+2015-10-05 01:47:35 WARN  HibernatePersistence:58 - HHH015016: Encountered a deprecated javax.persistence.spi.PersistenceProvider [org.hibernate.ejb.HibernatePersistence]; use [org.hibernate.jpa.HibernatePersistenceProvider] instead.
+2015-10-05 01:47:35 INFO  LogHelper:46 - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2015-10-05 01:47:36 INFO  Version:54 - HHH000412: Hibernate Core {4.3.6.Final}
+2015-10-05 01:47:36 INFO  Environment:239 - HHH000206: hibernate.properties not found
+2015-10-05 01:47:36 INFO  Environment:346 - HHH000021: Bytecode provider name : javassist
+2015-10-05 01:47:37 INFO  Version:66 - HCANN000001: Hibernate Commons Annotations {4.0.5.Final}
+2015-10-05 01:47:41 INFO  Dialect:145 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2015-10-05 01:47:41 INFO  ASTQueryTranslatorFactory:47 - HHH000397: Using ASTQueryTranslatorFactory
+2015-10-05 01:47:42 INFO  Version:27 - HV000001: Hibernate Validator 4.3.0.Final
+2015-10-05 01:47:55 INFO  UserServiseImpl:29 - Start creating user: UserVO [user_id=null, user_name=night, login=NIGHT, password= morning, city=day, country=evening, telephone=telephone, rolesVO=null]
+2015-10-05 01:47:55 INFO  UserServiseImpl:167 - Check if user with login: NIGHT and password:  morning exist
+2015-10-05 01:47:56 INFO  UserServiseImpl:34 - User to add doesn't exist. Start creating user
+2015-10-05 01:47:57 INFO  UserServiseImpl:36 - User: User [user_id=124, user_name=night, login=NIGHT, password= morning] was created
